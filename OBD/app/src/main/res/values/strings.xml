@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">OBD</string>
+    <string name="no_devices">There are no devices paired</string>
+    <string name="obd_paired_device_not_found">OBD paired device not found!</string>
+    <string name="title_home">Recording</string>
+    <string name="title_dashboard">Map</string>
+    <string name="title_notifications">Settings</string>
+    <string name="title_activity_start">CO2Tracker</string>
+    <string name="start_recording">Start recording</string>
+    <string name="google_maps_key">AIzaSyBLHhnycP_-KL3c_gQrmgZQgdFMs4p2YJc</string>
+</resources>

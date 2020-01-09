@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'android-obd-reader'
+    bintrayName = 'android-obd-reader'
+
+    publishedGroupId = 'com.sohrab'
+    libraryName = 'obd-reader'
+    artifact = 'obd-reader'
+
+    libraryDescription = 'Android OBD-II Reader library that read standard PIDs values (Mode 01)'
+
+    siteUrl = 'https://github.com/md-sohrab-alam/android-obd-reader'
+    gitUrl = 'https://github.com/md-sohrab-alam/android-obd-reader.git'
+
+    libraryVersion = '1.0.1'
+
+    developerId = 'md-sohrab-alam'
+    developerName = 'Sohrab Alam'
+    developerEmail = 'iamsohrabalam@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+
+    defaultConfig {
+
+        minSdkVersion 15
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
